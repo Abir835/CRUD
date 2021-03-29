@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1 style="text-align: center">Student Info</h1>
+    <h6>Student ID: {{ student_info.id }}</h6>
+    <h6>Name: {{ student_info.first_name }} {{ student_info.last_name }}</h6>
+    <h6>Email: {{ student_info.email }}</h6>
+    <h6>Phone: {{ student_info.phone }}</h6>
+    <a href="{% url 'first_app:student_update' student_id=student_info.id %}" class="btn btn-primary">Update</a>
+    <a href="{% url 'first_app:student_delete' student_id=student_info.id %}" class="btn btn-primary">Delete</a>
+{% endblock %}
